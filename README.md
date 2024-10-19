@@ -7,6 +7,11 @@ Personally, I dislike (to put it mildly) the default textures of most stone-like
 By smoothening them out, I hope to achieve a better experience. Especially because the SchoolRP pack does not 
 override the most commonly used blocks in the map.
 
+# Installation
+Just [click here](https://github.com/LuckyLuuk12/SchoolRP-plus/archive/refs/heads/master.zip).
+And then put the zip file in your resource pack folder. You can find this folder by going to the Minecraft main menu, then clicking on Options -> Resource Packs -> Open Resource Pack Folder.
+
+# Useful commands
 Here are some useful commands in case you want to use custom models / items I wanted to test out for SchoolRP:
 ```
 /minecraft:give @p minecraft:leather_horse_armor[minecraft:custom_model_data=1,minecraft:dyed_color=8798368]
