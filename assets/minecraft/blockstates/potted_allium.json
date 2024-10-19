@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+            { "model": "block/potted_flowers/potted_lavender"},
+            { "model": "block/potted_flowers/potted_lavender", "y": 90 },
+            { "model": "block/potted_flowers/potted_lavender", "y": 180 },
+            { "model": "block/potted_flowers/potted_lavender", "y": 270 }
+    ]
+  }
+}

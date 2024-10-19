@@ -1,0 +1,6 @@
+{
+    "parent":"block/spruce_fixed",
+    "textures": {
+	"bushy": "block/spruce_bushy"
+    }
+}

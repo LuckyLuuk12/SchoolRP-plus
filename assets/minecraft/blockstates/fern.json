@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+        { "model": "block/grass/fern", "weight": 15 },
+            { "model": "block/grass/fern", "weight": 15 ,"y": 90 },
+            { "model": "block/grass/fern", "weight": 15 ,"y": 180 },
+            { "model": "block/grass/fern", "weight": 15 ,"y": 270 }
+    ]
+    }
+}

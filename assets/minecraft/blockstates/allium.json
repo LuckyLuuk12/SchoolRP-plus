@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "block/flowers/lavender"},
+            { "model": "block/flowers/lavender", "y": 90 },
+            { "model": "block/flowers/lavender", "y": 180 },
+            { "model": "block/flowers/lavender", "y": 270 }
+        ]
+    }
+}

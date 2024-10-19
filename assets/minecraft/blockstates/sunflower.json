@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "half=lower": [
+	{"model": "minecraft:block/tall_flowers/sunflower_bottom"},
+	{"model": "minecraft:block/tall_flowers/sunflower_bottom", "y": 90},
+	{"model": "minecraft:block/tall_flowers/sunflower_bottom", "y": 180},
+	{"model": "minecraft:block/tall_flowers/sunflower_bottom", "y": 270}
+	],
+    "half=upper": [
+	{"model": "minecraft:block/tall_flowers/sunflower_top"},
+	{"model": "minecraft:block/tall_flowers/sunflower_top", "y": 90},
+	{"model": "minecraft:block/tall_flowers/sunflower_top", "y": 180},
+	{"model": "minecraft:block/tall_flowers/sunflower_top", "y": 270}
+	]
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "variants": {
+        "": [
+            { "model": "block/flowers/cow_parsley1"},
+            { "model": "block/flowers/cow_parsley1", "y": 90 },
+            { "model": "block/flowers/cow_parsley1", "y": 180 },
+            { "model": "block/flowers/cow_parsley1", "y": 270 },
+            { "model": "block/flowers/cow_parsley2"},
+            { "model": "block/flowers/cow_parsley2", "y": 90 },
+            { "model": "block/flowers/cow_parsley2", "y": 180 },
+            { "model": "block/flowers/cow_parsley2", "y": 270 }
+        ]
+    }
+}

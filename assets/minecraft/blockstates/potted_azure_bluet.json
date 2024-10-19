@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+            { "model": "block/potted_flowers/potted_cow_parsley"},
+            { "model": "block/potted_flowers/potted_cow_parsley", "y": 90 },
+            { "model": "block/potted_flowers/potted_cow_parsley", "y": 180 },
+            { "model": "block/potted_flowers/potted_cow_parsley", "y": 270 }
+    ]
+  }
+}

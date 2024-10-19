@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="old-gui">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/assets/minecraft/textures/gui/old-gui.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

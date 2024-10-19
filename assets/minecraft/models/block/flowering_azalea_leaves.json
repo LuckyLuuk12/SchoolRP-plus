@@ -1,0 +1,6 @@
+{
+    "parent":"block/default_fixed",
+    "textures": {
+	"bushy": "block/flowering_azalea_bushy"
+    }
+}

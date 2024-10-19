@@ -1,0 +1,15 @@
+{
+    "variants": {
+        "": [
+        { "model": "block/grass/clover1", "weight": 15 },
+            { "model": "block/grass/clover1", "weight": 15 ,"y": 90 },
+            { "model": "block/grass/clover1", "weight": 15 ,"y": 180 },
+            { "model": "block/grass/clover1", "weight": 15 ,"y": 270 },
+        { "model": "block/grass/clover2", "weight": 5 },
+            { "model": "block/grass/clover2", "weight": 5 ,"y": 90 },
+            { "model": "block/grass/clover2", "weight": 5 ,"y": 180 },
+            { "model": "block/grass/clover2", "weight": 5 ,"y": 270 },
+        { "model": "block/grass/tall_grass", "weight": 80 }		
+    ]
+    }
+}

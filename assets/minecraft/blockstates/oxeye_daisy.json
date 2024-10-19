@@ -1,0 +1,30 @@
+{
+    "variants": {
+        "": [
+            { "model": "block/flowers/oxeye_daisy1"},
+            { "model": "block/flowers/oxeye_daisy1", "y": 90 },
+            { "model": "block/flowers/oxeye_daisy1", "y": 180 },
+            { "model": "block/flowers/oxeye_daisy1", "y": 270 },
+            { "model": "block/flowers/oxeye_daisy1_a"},
+            { "model": "block/flowers/oxeye_daisy1_a", "y": 90 },
+            { "model": "block/flowers/oxeye_daisy1_a", "y": 180 },
+            { "model": "block/flowers/oxeye_daisy1_a", "y": 270 },
+            { "model": "block/flowers/oxeye_daisy1_b"},
+            { "model": "block/flowers/oxeye_daisy1_b", "y": 90 },
+            { "model": "block/flowers/oxeye_daisy1_b", "y": 180 },
+            { "model": "block/flowers/oxeye_daisy1_b", "y": 270 },
+            { "model": "block/flowers/oxeye_daisy2"},
+            { "model": "block/flowers/oxeye_daisy2", "y": 90 },
+            { "model": "block/flowers/oxeye_daisy2", "y": 180 },
+            { "model": "block/flowers/oxeye_daisy2", "y": 270 },
+            { "model": "block/flowers/oxeye_daisy2_a"},
+            { "model": "block/flowers/oxeye_daisy2_a", "y": 90 },
+            { "model": "block/flowers/oxeye_daisy2_a", "y": 180 },
+            { "model": "block/flowers/oxeye_daisy2_a", "y": 270 },
+            { "model": "block/flowers/oxeye_daisy2_b"},
+            { "model": "block/flowers/oxeye_daisy2_b", "y": 90 },
+            { "model": "block/flowers/oxeye_daisy2_b", "y": 180 },
+            { "model": "block/flowers/oxeye_daisy2_b", "y": 270 }
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "block/flowers/lily_of_the_valley"},
+            { "model": "block/flowers/lily_of_the_valley", "y": 90 },
+            { "model": "block/flowers/lily_of_the_valley", "y": 180 },
+            { "model": "block/flowers/lily_of_the_valley", "y": 270 }
+        ]
+    }
+}

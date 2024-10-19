@@ -1,0 +1,75 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "block/tall_flowers/pitcher_plant_flower_green",
+		"particle": "block/tall_flowers/pitcher_plant_flower_green"
+	},
+	"elements": [
+		{
+			"from": [4, -5, 4],
+			"to": [12, 0, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, -8, 4]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 2.5], "texture": "#0"},
+				"east": {"uv": [0, 0, 4, 2.5], "texture": "#0"},
+				"south": {"uv": [0, 0, 4, 2.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 4, 2.5], "texture": "#0"},
+				"down": {"uv": [0, 8, 4, 12], "texture": "#0"}
+			}
+		},
+		{
+			"from": [3, 0, 3],
+			"to": [13, 3, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, -8, 4]},
+			"faces": {
+				"north": {"uv": [9.5, 6, 4.5, 7.5], "texture": "#0"},
+				"east": {"uv": [9.5, 6, 4.5, 7.5], "texture": "#0"},
+				"south": {"uv": [9.5, 6, 4.5, 7.5], "texture": "#0"},
+				"west": {"uv": [9.5, 6, 4.5, 7.5], "texture": "#0"},
+				"up": {"uv": [4.5, 5.5, 9.5, 0.5], "texture": "#0"},
+				"down": {"uv": [4.5, 8, 9.5, 13], "texture": "#0"}
+			}
+		},
+		{
+			"from": [9.81992, 5.18516, 4],
+			"to": [17.81992, 7.18516, 12],
+			"rotation": {"angle": 45, "axis": "z", "origin": [10.73992, -2.17484, 4.92]},
+			"faces": {
+				"north": {"uv": [15, 5.5, 16, 1.5], "rotation": 90, "texture": "#0"},
+				"east": {"uv": [14.5, 1, 10.5, 0], "texture": "#0"},
+				"south": {"uv": [15, 1.5, 16, 5.5], "rotation": 90, "texture": "#0"},
+				"west": {"uv": [10.5, 6, 14.5, 7], "texture": "#0"},
+				"up": {"uv": [10.5, 1.5, 14.5, 5.5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [14.5, 7.5, 10.5, 11.5], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, -7, 5],
+			"to": [11, -5, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, -8, 5]},
+			"faces": {
+				"north": {"uv": [0.5, 3, 3.5, 4], "texture": "#0"},
+				"east": {"uv": [0.5, 3, 3.5, 4], "texture": "#0"},
+				"south": {"uv": [0.5, 3, 3.5, 4], "texture": "#0"},
+				"west": {"uv": [0.5, 3, 3.5, 4], "texture": "#0"},
+				"down": {"uv": [3.5, 4.5, 0.5, 7.5], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [67, 0, 0],
+			"translation": [8.5, -0.5, -5.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "flower",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}
