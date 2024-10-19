@@ -1,4 +1,7 @@
-# Better SchoolRP Resources
+# SchoolRP++ Resource Pack
+To begin with, even though I am a developer for the SchoolRP server, this pack is in no way affiliated with the server.
+This is a personal project that I have been working on for some time now. And I am happy to share it with the community.
+
 The main goal of this pack is to provide a better, smoother experience for the players of the SchoolRP server.
 Personally, I dislike (to put it mildly) the default textures of most stone-like blocks like granite and diorite.
 By smoothening them out, I hope to achieve a better experience. Especially because the SchoolRP pack does not 
