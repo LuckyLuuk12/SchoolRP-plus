@@ -9,7 +9,7 @@ override the most commonly used blocks in the map.
 
 # Installation
 Just [click here](https://github.com/LuckyLuuk12/SchoolRP-plus/archive/refs/heads/master.zip).
-And then put the zip file in your resource pack folder. You can find this folder by going to the Minecraft main menu, then clicking on Options -> Resource Packs -> Open Resource Pack Folder.
+And then **extract** the zip file in your resource pack folder. You can find this folder by going to the Minecraft main menu, then clicking on Options -> Resource Packs -> Open Resource Pack Folder.
 If you only wanted the head fix for Sodium users then just remove everything except the shaders folder and the pack.mcmeta file.
 You also might want to use [this mod](https://modrinth.com/mod/my-resource-pack) to make sure the pack is always on top.
 
