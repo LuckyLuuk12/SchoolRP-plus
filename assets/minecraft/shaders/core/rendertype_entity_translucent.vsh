@@ -82,12 +82,12 @@ vec2 getUVOffset(int corner, vec3 cubeSize, float yOffset) {
     vec2 offset, uv;
     if (GlintAlpha != 1.0) {
         switch(corner / 4) {
-            case 4: // Left
+            case 2: // Left
                 offset = vec2(cubeSize.z + cubeSize.x, cubeSize.z);
                 offset.y += yOffset;
                 uv = vec2(cubeSize.z, cubeSize.y);
                 break;
-            case 5: // Right
+            case 4: // Right
                 offset = vec2(0, cubeSize.z);
                 offset.y += yOffset;
                 uv = vec2(cubeSize.z, cubeSize.y);
@@ -100,12 +100,12 @@ vec2 getUVOffset(int corner, vec3 cubeSize, float yOffset) {
                 offset = vec2(cubeSize.z + cubeSize.x, 0 + cubeSize.z);
                 uv = vec2(cubeSize.x, -cubeSize.z);
                 break;
-            case 2: // Front
+            case 3: // Front
                 offset = vec2(cubeSize.z, cubeSize.z);
                 offset.y += yOffset;
                 uv = vec2(cubeSize.x, cubeSize.y);
                 break;
-            case 3: // Back
+            case 5: // Back
                 offset = vec2(2 * cubeSize.z + cubeSize.x, cubeSize.z);
                 offset.y += yOffset;
                 uv = vec2(cubeSize.x, cubeSize.y);
@@ -114,12 +114,12 @@ vec2 getUVOffset(int corner, vec3 cubeSize, float yOffset) {
     } 
 	else {
         switch(corner / 4) {
-            case 0: // Left
+            case 1: // Left
                 offset = vec2(cubeSize.z + cubeSize.x, cubeSize.z);
                 offset.y += yOffset;
                 uv = vec2(cubeSize.z, cubeSize.y);
                 break;
-            case 1: // Right
+            case 0: // Right
                 offset = vec2(0, cubeSize.z);
                 offset.y += yOffset;
                 uv = vec2(cubeSize.z, cubeSize.y);

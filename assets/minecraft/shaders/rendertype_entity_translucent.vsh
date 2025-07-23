@@ -1,25 +1,31 @@
 #version 150
 
-#moj_import <light.glsl>
 #moj_import <fog.glsl>
+#moj_import <light.glsl>
 
-in vec3 Position, Normal;
+in vec3 Position;
 in vec4 Color;
 in vec2 UV0;
-in ivec2 UV1, UV2;
+in ivec2 UV1;
+in ivec2 UV2;
+in vec3 Normal;
 
-uniform sampler2D Sampler0, Sampler1, Sampler2;
-
-uniform mat4 ModelViewMat, ProjMat;
+uniform sampler2D Sampler0;
+uniform sampler2D Sampler1;
+uniform sampler2D Sampler2;
+uniform mat4 ModelViewMat;
+uniform mat4 ProjMat;
 uniform int FogShape;
-
-uniform vec3 Light0_Direction, Light1_Direction;
-
+uniform vec3 Light0_Direction;
+uniform vec3 Light1_Direction;
 uniform float GlintAlpha;
 
 out float vertexDistance;
-out vec4 vertexColor, lightMapColor, overlayColor, normal;
+out vec4 vertexColor, lightMapColor, overlayColor;
 out vec2 texCoord0, texCoord1;
+out vec3 normal;
+flat out int quadId;
+flat out int renderAvatar;
 out vec3 a, b;
 
 vec3 getCubeSize(int cube, bool slim) {
@@ -82,12 +88,12 @@ vec2 getUVOffset(int corner, vec3 cubeSize, float yOffset) {
     vec2 offset, uv;
     if (GlintAlpha != 1.0) {
         switch(corner / 4) {
-            case 2: // Left
+            case 3: // Left
                 offset = vec2(cubeSize.z + cubeSize.x, cubeSize.z);
                 offset.y += yOffset;
                 uv = vec2(cubeSize.z, cubeSize.y);
                 break;
-            case 4: // Right
+            case 2: // Right
                 offset = vec2(0, cubeSize.z);
                 offset.y += yOffset;
                 uv = vec2(cubeSize.z, cubeSize.y);
@@ -100,7 +106,7 @@ vec2 getUVOffset(int corner, vec3 cubeSize, float yOffset) {
                 offset = vec2(cubeSize.z + cubeSize.x, 0 + cubeSize.z);
                 uv = vec2(cubeSize.x, -cubeSize.z);
                 break;
-            case 3: // Front
+            case 4: // Front
                 offset = vec2(cubeSize.z, cubeSize.z);
                 offset.y += yOffset;
                 uv = vec2(cubeSize.x, cubeSize.y);
@@ -111,10 +117,9 @@ vec2 getUVOffset(int corner, vec3 cubeSize, float yOffset) {
                 uv = vec2(cubeSize.x, cubeSize.y);
                 break;
         }
-    } 
-	else {
+    } else {
         switch(corner / 4) {
-            case 0: // Left
+            case 4: // Left
                 offset = vec2(cubeSize.z + cubeSize.x, cubeSize.z);
                 offset.y += yOffset;
                 uv = vec2(cubeSize.z, cubeSize.y);
@@ -132,7 +137,7 @@ vec2 getUVOffset(int corner, vec3 cubeSize, float yOffset) {
                 offset = vec2(cubeSize.z + cubeSize.x, 0 + cubeSize.z);
                 uv = vec2(cubeSize.x, -cubeSize.z);
                 break;
-            case 4: // Front
+            case 0: // Front
                 offset = vec2(cubeSize.z, cubeSize.z);
                 offset.y += yOffset;
                 uv = vec2(cubeSize.x, cubeSize.y);
@@ -166,9 +171,16 @@ bool isExcluded() {
 }
 
 void main() {
+    vec3 pos = Position;
+    renderAvatar = int(ProjMat[2][3] == 0.0 && Normal.z <= -0.99999);
+    quadId = (gl_VertexID / 4) % 24;
+
+    const vec2 uvs[] = vec2[](vec2(1, 0), vec2(0, 0), vec2(0, 1), vec2(1, 1));
+
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
 
     a = b = vec3(0);
+    texCoord0 = UV0;
     if(textureSize(Sampler0, 0) == vec2(64, 64) && UV0.y <= 0.25 && (gl_VertexID / 24 != 6 || UV0.x <= 0.5) && (!isExcluded())) {
 
         switch(gl_VertexID % 4) {
@@ -183,18 +195,19 @@ void main() {
         vec2 boxUV = getBoxUV(cube) / 64;
         vec2 uvOffset = getUVOffset(corner, cubeSize, 0);
         texCoord0 = boxUV + uvOffset;
-
-        // Debugging output
-        // Uncomment the following line to output UV coordinates for debugging
-        // printf("cube: %d, boxUV: %f, %f, uvOffset: %f, %f, texCoord0: %f, %f\n", cube, boxUV.x, boxUV.y, uvOffset.x, uvOffset.y, texCoord0.x, texCoord0.y);
-    } else {
-        texCoord0 = UV0;
     }
 
-    vertexDistance = length((ModelViewMat * vec4(Position, 1.0)).xyz);
+    texCoord0 = renderAvatar > 0 ? uvs[gl_VertexID % 4] : texCoord0;
+
+    vertexDistance = length(Position);
     vertexColor = minecraft_mix_light(Light0_Direction, Light1_Direction, Normal, Color);
     lightMapColor = texelFetch(Sampler2, UV2 / 16, 0);
     overlayColor = texelFetch(Sampler1, UV1, 0);
+    
+    const float scale = 37.0;
+    if (renderAvatar > 0) pos.xy += (uvs[gl_VertexID % 4] * scale - vec2(scale * 0.5, 0.0)) * vec2(-Normal.z, 1.0);
+    normal = Normal;
     texCoord1 = UV0;
-    normal = ProjMat * ModelViewMat * vec4(Normal, 0.0);
+
+    gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 }
