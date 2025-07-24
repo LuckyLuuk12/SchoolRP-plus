@@ -18,7 +18,8 @@ uniform vec3 Light0_Direction, Light1_Direction;
 uniform float GlintAlpha;
 
 out float vertexDistance;
-out vec4 vertexColor, lightMapColor, overlayColor, normal;
+out vec4 vertexColor, lightMapColor, overlayColor;
+out vec3 normal;
 out vec2 texCoord0, texCoord1;
 out vec3 a, b;
 
@@ -78,6 +79,7 @@ vec2 getBoxUV(int cube) {
     return vec2(0, 0);
 }
 
+// 1.21.1 has special UV offsets compared to 1.21 and 1.21.4
 vec2 getUVOffset(int corner, vec3 cubeSize, float yOffset) {
     vec2 offset, uv;
     if (GlintAlpha != 1.0) {
@@ -112,7 +114,7 @@ vec2 getUVOffset(int corner, vec3 cubeSize, float yOffset) {
                 break;
         }
     } 
-	else {
+    else {
         switch(corner / 4) {
             case 1: // Left
                 offset = vec2(cubeSize.z + cubeSize.x, cubeSize.z);
@@ -196,5 +198,5 @@ void main() {
     lightMapColor = texelFetch(Sampler2, UV2 / 16, 0);
     overlayColor = texelFetch(Sampler1, UV1, 0);
     texCoord1 = UV0;
-    normal = ProjMat * ModelViewMat * vec4(Normal, 0.0);
+    normal = mat3(ProjMat * ModelViewMat) * Normal;
 }
