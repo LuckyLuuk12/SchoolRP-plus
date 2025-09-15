@@ -1,0 +1,45 @@
+{
+	"credit": "Made with Blockbench",
+	"textureSize": [64, 32],
+	"models": [
+		{
+			"part": "body",
+			"id": "body",
+			"invertAxis": "xy",
+			"translate": [0, -24, 0],
+			"boxes": [
+				{"coordinates": [-4, 0, -4, 8, 8, 8], "textureOffset": [0, 0]},
+				{"coordinates": [-3, 1, -4.5, 6, 6, 1], "textureOffset": [8, 8]},
+				{"coordinates": [-3, 1, 3.5, 6, 6, 1], "textureOffset": [8, 8]},
+				{
+					"coordinates": [-4.5, 1, -3, 1, 6, 6],
+					"uvNorth": [7, 9, 8, 15],
+					"uvEast": [1, 9, 7, 15],
+					"uvSouth": [14, 9, 15, 15],
+					"uvWest": [8, 9, 14, 15],
+					"uvUp": [1, 15, 0, 9],
+					"uvDown": [9, 3, 8, 9]
+				},
+				{
+					"coordinates": [3.5, 1, -3, 1, 6, 6],
+					"uvNorth": [7, 9, 8, 15],
+					"uvEast": [1, 9, 7, 15],
+					"uvSouth": [14, 9, 15, 15],
+					"uvWest": [8, 9, 14, 15],
+					"uvUp": [1, 15, 0, 9],
+					"uvDown": [9, 3, 8, 9]
+				},
+				{"coordinates": [-3, 7.5, -3, 6, 1, 6], "textureOffset": [3, 2]},
+				{
+					"coordinates": [-3, -0.5, -3, 6, 1, 6],
+					"uvNorth": [9, 7, 15, 8],
+					"uvEast": [9, 0, 15, 1],
+					"uvSouth": [15, 0, 21, 1],
+					"uvWest": [15, 7, 21, 8],
+					"uvUp": [15, 7, 9, 1],
+					"uvDown": [21, 1, 15, 7]
+				}
+			]
+		}
+	]
+}
